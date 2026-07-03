@@ -92,8 +92,8 @@ const EXPERIENCE = [
     location: 'Remote',
     active: true,
     points: [
-      'Built and deployed 4 production AI systems independently — RAG pipeline, computer vision safety monitor, security scanner, and quiz generator',
-      'Full ownership from system design, backend, frontend, to production deployment on Railway and Vercel',
+      'Built 5 AI systems independently — RAG pipeline, computer vision safety monitor, security scanner, quiz generator, and anomaly detection tool',
+      'Full ownership from system design through backend, frontend, and deployment; shipped EduRAG Assistant to production on Railway and Vercel',
       'Stack: Python, FastAPI, LangChain, Groq API, ChromaDB, React, TypeScript',
     ],
   },
@@ -336,9 +336,9 @@ export default function App() {
           {/* Stats */}
           <div style={{ display: 'flex', gap: 40, flexWrap: 'wrap' }}>
             {[
-              { value: '5+', label: 'AI projects shipped' },
+              { value: '5+', label: 'projects built' },
               { value: 'PKT', label: 'UTC+5 timezone' },
-              { value: 'Live', label: 'deployed & working' },
+              { value: 'Live', label: 'design → deploy' },
             ].map(stat => (
               <div key={stat.label}>
                 <p style={{ fontSize: 26, fontWeight: 600, color: 'var(--text-primary)', fontFamily: 'var(--mono)', marginBottom: 2 }}>
@@ -641,9 +641,10 @@ export default function App() {
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48 }}>
           <div>
             <p style={{ color: 'var(--text-secondary)', lineHeight: 1.8, marginBottom: 16, fontSize: 15 }}>
-              I'm a Full-Stack AI Developer focused on building AI products that work in production —
-              not just demos. I care about the full picture: clean architecture, fast APIs,
-              usable frontends, and reliable deployments.
+              I'm a Full-Stack AI Developer focused on building AI products end-to-end — 
+              from system design to production. I care about the full picture: clean 
+              architecture, fast APIs, usable frontends, and deployments that actually 
+              hold up.
             </p>
             <p style={{ color: 'var(--text-secondary)', lineHeight: 1.8, fontSize: 15 }}>
               I work best in small, fast-moving teams where I can own features end-to-end.
