@@ -9,16 +9,16 @@ const NAV_LINKS = ['Work', 'Stack', 'About', 'Contact']
 
 const PROJECTS = [
   {
-    id: 'edurag',
-    label: 'Featured · Live',
-    title: 'EduRAG Assistant',
-    description: 'Full-stack RAG application for document intelligence. Upload a PDF, get natural language Q&A, summarization, quiz generation, topic extraction, and source-cited responses. Built solo from system design to production deployment.',
-    stack: ['Python', 'FastAPI', 'LangChain', 'Groq API', 'ChromaDB', 'HuggingFace', 'React', 'TypeScript'],
-    github: 'https://github.com/Fahad-12345/EduRAG-Assistant',
-    live: 'https://edu-rag-assistant.vercel.app',
-    featured: true,
-    image: '/projects/EduRAG.png',
-  },
+  id: 'edurag',
+  label: 'Featured · Live',
+  title: 'EduRAG Assistant',
+  description: 'Full-stack agentic RAG application for document intelligence. A LangGraph-based system classifies intent, retrieves relevant context, and routes to Q&A, summarization, quiz generation, or topic extraction — with a relevance-gated grounding check that blocks hallucinated answers before generation. Built solo from system design to production deployment.',
+  stack: ['Python', 'FastAPI', 'LangGraph', 'LangChain', 'Groq API', 'ChromaDB', 'HuggingFace', 'React', 'TypeScript'],
+  github: 'https://github.com/Fahad-12345/EduRAG-Assistant',
+  live: 'https://edu-rag-assistant.vercel.app',
+  featured: true,
+  image: '/projects/EduRAG.png',
+},
   {
     id: 'ppe',
     label: 'Computer Vision',
