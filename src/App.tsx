@@ -10,7 +10,7 @@ const NAV_LINKS = ['Work', 'Stack', 'About', 'Contact']
 const PROJECTS = [
   {
   id: 'edurag',
-  label: 'Featured · Live',
+  label: 'Featured',
   title: 'EduRAG Assistant',
   description: 'Full-stack, multi-tenant agentic RAG application for document intelligence. A LangGraph-based system classifies intent, retrieves relevant context, and routes to Q&A, summarization, quiz generation, or topic extraction — with a relevance-gated grounding check that blocks hallucinated answers before generation. JWT authentication with per-user Chroma isolation, a live usage dashboard, and persistent storage on Railway via volumes. Instrumented with Langfuse for full observability and a regression eval harness, and exposed as an MCP server for use with Claude Desktop and other MCP clients. Built solo from system design to production deployment.',
   stack: ['Python', 'FastAPI', 'LangGraph', 'LangChain', 'Groq API', 'ChromaDB', 'HuggingFace', 'MCP', 'Langfuse', 'JWT Auth', 'SQLAlchemy', 'React', 'TypeScript'],
@@ -310,7 +310,7 @@ export default function App() {
             >
               See my work <FaArrowRight style={{ fontSize: 12 }} />
             </a>
-            <a
+            {/* <a
               href="https://edu-rag-assistant.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
@@ -330,7 +330,7 @@ export default function App() {
               onMouseLeave={e => (e.currentTarget.style.borderColor = 'var(--border-hover)')}
             >
               Live demo <FaExternalLinkAlt style={{ fontSize: 11 }} />
-            </a>
+            </a> */}
           </div>
 
           {/* Stats */}
@@ -427,7 +427,7 @@ export default function App() {
                 </div>
               </div>
               <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-                {project.live && (
+                {/* {project.live && (
                   <a
                     href={project.live}
                     target="_blank"
@@ -449,7 +449,7 @@ export default function App() {
                   >
                     <FaExternalLinkAlt style={{ fontSize: 10 }} /> Live demo
                   </a>
-                )}
+                )} */}
                 <a
                   href={project.github}
                   target="_blank"
