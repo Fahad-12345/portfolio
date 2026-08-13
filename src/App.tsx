@@ -256,7 +256,7 @@ export default function App() {
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 24 }}>
             <div style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--green)', boxShadow: '0 0 8px var(--green)' }} />
             <span style={{ fontFamily: 'var(--mono)', fontSize: 12, color: 'var(--green)', letterSpacing: '0.05em' }}>
-              AVAILABLE FOR REMOTE ROLES
+              AVAILABLE FOR REMOTE AND ONSITE ROLES
             </span>
           </div>
 
@@ -652,7 +652,7 @@ export default function App() {
               interfaces depending on what the product needs.
             </p>
             <div style={{ marginTop: 28, display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-              {['Remote only', 'Pakistan (PKT)', 'MS Electrical Engineering', 'Available now'].map(tag => (
+              {['Remote/onsite', 'Pakistan (PKT)', 'MS Electrical Engineering', 'Available now'].map(tag => (
                 <span
                   key={tag}
                   style={{
@@ -744,7 +744,7 @@ export default function App() {
           </h2>
           <p style={{ color: 'var(--text-secondary)', maxWidth: 480, marginBottom: 40, lineHeight: 1.7 }}>
             Looking for a product-focused startup where I can own features end-to-end.
-            Open to full-stack, backend, or AI engineering roles. Remote only.
+            Open to full-stack, backend, or AI engineering roles.
           </p>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12 }}>
