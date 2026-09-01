@@ -8,27 +8,39 @@ import { SiPython, SiReact, SiTypescript, SiFastapi, SiLangchain, SiNodedotjs } 
 const NAV_LINKS = ['Work', 'Stack', 'About', 'Contact']
 
 const PROJECTS = [
-  {
+ {
   id: 'edurag',
   label: 'Featured',
   title: 'EduRAG Assistant',
-  description: 'Full-stack, multi-tenant agentic RAG application for document intelligence. A LangGraph-based system classifies intent, retrieves relevant context, and routes to Q&A, summarization, quiz generation, or topic extraction — with a relevance-gated grounding check that blocks hallucinated answers before generation. JWT authentication with per-user Chroma isolation, a live usage dashboard, and persistent storage on Railway via volumes. Instrumented with Langfuse for full observability and a regression eval harness, and exposed as an MCP server for use with Claude Desktop and other MCP clients. Built solo from system design to production deployment.',
-  stack: ['Python', 'FastAPI', 'LangGraph', 'LangChain', 'Groq API', 'ChromaDB', 'HuggingFace', 'MCP', 'Langfuse', 'JWT Auth', 'SQLAlchemy', 'React', 'TypeScript'],
+  description: 'Full-stack, multi-tenant agentic RAG application for document intelligence. A LangGraph-based system classifies intent, retrieves relevant context, and routes to Q&A, summarization, quiz generation, or topic extraction — with a relevance-gated grounding check that blocks hallucinated answers before generation. JWT authentication with per-user Chroma isolation, a live usage dashboard, and persistent storage on Railway via volumes. Instrumented with Langfuse for full observability and a regression eval harness, and exposed as an MCP server for use with Claude Desktop and other MCP clients. Extended with an n8n automation layer that calls directly into the same backend, enabling chat-based interfaces (e.g. Slack) without touching the core application. Built solo from system design to production deployment.',
+  stack: ['Python', 'FastAPI', 'LangGraph', 'LangChain', 'Groq API', 'ChromaDB', 'HuggingFace', 'MCP', 'Langfuse', 'JWT Auth', 'SQLAlchemy', 'React', 'TypeScript', 'n8n'],
   github: 'https://github.com/Fahad-12345/EduRAG-Assistant',
   live: 'https://edu-rag-assistant.vercel.app',
   featured: true,
-  image: '/projects/EduRAG.png',
+  image: '/projects/eduRAG.png',
+  image2: '/projects/EduRAG-n8n.png',
 },
   {
     id: 'ppe',
     label: 'Computer Vision',
     title: 'AI PPE Safety Monitor',
     description: 'Real-time industrial safety system using a custom-trained YOLOv8n model on 1,132 construction site images. Detects helmet and vest violations from live camera feed with Flask dashboard, incident logging, and audio alerts.',
-    stack: ['Python', 'YOLOv8', 'OpenCV', 'Flask', 'SQLite'],
+    stack: ['Python', 'YOLOv8', 'OpenCV', 'Flask', 'SQLite', 'n8n'],
     github: 'https://github.com/Fahad-12345/AI-Smart-Surveillance-System',
     live: null,
     featured: false,
     image: '/projects/ai-surveillance.png',
+  },
+  {
+    id: 'lead-agent',
+    label: 'Automation',
+    title: 'Confidence-Gated Lead Intake Agent',
+    description: 'n8n workflow that extracts structured lead data (name, email, need, urgency) from a chat message via LLM, then gates the result on a confidence score before taking any action. High-confidence extractions auto-log to Google Sheets with a Slack confirmation; low-confidence or incomplete extractions — including a deterministic check that catches missing or invalid emails the model itself missed — route to human review instead of silently writing unverified data.',
+    stack: ['n8n', 'Groq API', 'Google Sheets API', 'Slack API'],
+    github: '#',
+    live: null,
+    featured: false,
+    image: '/projects/lead-intake-agent.png',
   },
   {
     id: 'complicheck',
@@ -68,7 +80,7 @@ const PROJECTS = [
 const STACK = [
   {
     category: 'AI & LLM',
-    items: ['LangChain', 'RAG Pipelines', 'Groq API', 'HuggingFace', 'ChromaDB', 'YOLOv8', 'Prompt Engineering', 'Vector Search'],
+    items: ['LangChain', 'RAG Pipelines', 'Groq API', 'HuggingFace', 'ChromaDB', 'YOLOv8', 'n8n', 'Vector Search'],
   },
   {
     category: 'Backend',
@@ -98,7 +110,7 @@ const EXPERIENCE = [
     ],
   },
   {
-    role: 'Jr. Software Engineer',
+    role: 'Full-Stack Software Engineer',
     company: 'Deline Media Pakistan',
     period: 'Aug 2023 – Oct 2024',
     location: 'Lahore, Pakistan',
@@ -473,20 +485,52 @@ export default function App() {
                 </a>
               </div>
             </div>
-            <div style={{
-              background: '#080808',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              padding: 24,
-              borderLeft: '1px solid var(--border)',
-            }}>
-              <img
-                src={project.image}
-                alt={project.title}
-                style={{ width: '100%', maxHeight: 280, objectFit: 'contain', borderRadius: 8 }}
-              />
-            </div>
+       <div style={{
+  background: '#080808',
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 12,
+  padding: 16,
+  height: '100%',
+  borderLeft: '1px solid var(--border)',
+}}>
+  <div style={{
+    flex: 1,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    background: '#0d0d0d',
+    border: '1px solid var(--border)',
+    borderRadius: 8,
+    padding: 12,
+    minHeight: 0,
+  }}>
+    <img
+      src={project.image}
+      alt={project.title}
+      style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', borderRadius: 6 }}
+    />
+  </div>
+  {project.image2 && (
+    <div style={{
+      flex: 1,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      background: '#0d0d0d',
+      border: '1px solid var(--border)',
+      borderRadius: 8,
+      padding: 12,
+      minHeight: 0,
+    }}>
+      <img
+        src={project.image2}
+        alt={`${project.title} - n8n automation`}
+        style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', borderRadius: 6 }}
+      />
+    </div>
+  )}
+</div>
           </div>
         ))}
 
