@@ -17,7 +17,7 @@ const PROJECTS = [
   github: 'https://github.com/Fahad-12345/EduRAG-Assistant',
   live: 'https://edu-rag-assistant.vercel.app',
   featured: true,
-  image: '/projects/eduRAG.png',
+  image: '/projects/EduRAG.png',
   image2: '/projects/EduRAG-n8n.png',
 },
   {
